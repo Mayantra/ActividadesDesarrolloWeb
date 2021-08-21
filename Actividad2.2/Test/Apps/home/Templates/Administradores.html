@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,47 +8,49 @@
     <link rel="stylesheet" href="css/estilo.css">
     <title>Administradores</title>
 </head>
+
 <body>
-   
+
     <div class="Menu">
-        <a href="index.html">HOME | </a>
-        <a href="Estudiantes.html">Estudiantes | </a>
-        <a href="Administradores.html">Administradores | </a>
-        <a href="AcercaDe.html">Acerca De</a> 
-        </div>
+        <a href="{% url 'home'%}">HOME | </a>
+        <a href="{% url 'estudiantes'%}">Estudiantes | </a>
+        <a href="{% url 'administradores'%}">Administradores | </a>
+        <a href="{% url 'acercaDe'%}">Acerca De</a>
+    </div>
 
     <div class="BloqueTablaA">
-    <table class="TablaAdmin">
+        <table class="TablaAdmin">
 
-        <tr>
-            <td>No.</td>
-            <td>Nombre del Administrador</td>
-            <td>Edad</td>
-            <td>DPI</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Manuel Salazar</td>
-            <td> 45</td>
-            <td>654984984</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Azarias Gomez</td>
-            <td>50</td>
-            <td>51981981</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Marcos Solis</td>
-            <td>60</td>
-            <td>65187487748</td>
-        </tr>
-        
-    </table>
+            <tr>
+                <td>No.</td>
+                <td>Nombre del Administrador</td>
+                <td>Edad</td>
+                <td>DPI</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Manuel Salazar</td>
+                <td> 45</td>
+                <td>654984984</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Azarias Gomez</td>
+                <td>50</td>
+                <td>51981981</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Marcos Solis</td>
+                <td>60</td>
+                <td>65187487748</td>
+            </tr>
+
+        </table>
     </div>
 
 
-    
+
 </body>
+
 </html>

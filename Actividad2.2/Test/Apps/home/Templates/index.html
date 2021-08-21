@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,29 +8,31 @@
     <link rel="stylesheet" href="css/estilo.css">
     <title>Home</title>
 </head>
+
 <body>
     <div class="Menu">
-    <a href="index.html">HOME | </a>
-    <a href="Estudiantes.html">Estudiantes | </a>
-    <a href="Administradores.html">Administradores | </a>
-    <a href="AcercaDe.html">Acerca De</a> 
+        <a href="{% url 'home'%}">HOME | </a>
+        <a href="{% url 'estudiantes'%}">Estudiantes | </a>
+        <a href="{% url 'administradores'%}">Administradores | </a>
+        <a href="{% url 'acercaDe'%}">Acerca De</a>
     </div>
 
 
 
     <div class="Titulo">
-    <H1>Información de la Página</H1>
+        <H1>Información de la Página</H1>
     </div>
 
 
-    <div class="Parrafo1"> 
+    <div class="Parrafo1">
         <h3>En este espacio esta la Información de la Página de inicio de la actvidad 1.1 del curso
-        de desarrollo de sistemas, esto para la practica de html y algunas etiqueras básicas 
-    </h3>
+            de desarrollo de sistemas, esto para la practica de html y algunas etiqueras básicas
+        </h3>
     </div>
 
 
 
-    
+
 </body>
+
 </html>
