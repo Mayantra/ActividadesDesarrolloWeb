@@ -19,8 +19,9 @@ from .views import AcercaView, AdminsView, EstudiantesView, HomeView
 
 urlpatterns = [
     path('index/', HomeView.as_view(), name='home'),
-    path('index/', EstudiantesView.as_view(), name='estudiantes'),
-    path('index/', AdminsView.as_view(), name='administradores'),
-    path('index/', AcercaView.as_view(), name='acercaDe'),
+    path('estudiantes/', EstudiantesView.as_view(), name='estudiantes'),
+    path('administradores/', AdminsView.as_view(), name='administradores'),
+    path('acercaDe/', AcercaView.as_view(), name='acercaDe'),
+    
 
 ]

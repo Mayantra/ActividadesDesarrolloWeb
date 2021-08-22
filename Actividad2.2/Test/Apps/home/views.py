@@ -13,3 +13,4 @@ class AdminsView(TemplateView):
 
 class AcercaView(TemplateView):
     template_name='AcercaDe.html'
+
