@@ -1,11 +1,19 @@
 from django.db import models
+from django.db.models.fields import CharField
 
 # Create your models here.
 class Cliente(models.Model):
+
+    doc = (
+        ('D','DPI'),
+        ('C','Cedula')
+    )
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
     direccion = models.CharField(max_length=200)
     nacimiento = models.DateField()
+    tipo =models.ForeignKey('TipoCliente', on_delete=models.CASCADE,default=1)
+    documento = models.CharField(max_length=20, choices=doc,default='D')
     creacion = models.DateField(auto_now_add=True)
     actualizacion = models.DateField(auto_now_add=True)
     
@@ -19,3 +27,9 @@ class TipoCliente(models.Model):
     
     def __str__(self):
         return '%s' % (self.tipo)
+
+class Ventas(models.Model):
+    cliente = models.ManyToManyField(Cliente)
+    fecha = models.DateTimeField()
+
+
