@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}"> 
+    <title>Acerca De</title>
+</head>
+
+<body>
+
+    <div class="Menu">
+        <a href="{% url 'home'%}">HOME | </a>
+        <a href="{% url 'estudiantes'%}">Estudiantes | </a>
+        <a href="{% url 'administradores'%}">Administradores | </a>
+        <a href="{% url 'acercaDe'%}">Acerca De</a>
+    </div>
+
+    <div class="Acerca">
+        <h1 class="AcercaH">0903-18-1693</h1>
+        <h3>Edwin Isaac Bautista Vásquez</h3>
+    </div>
+
+
+</body>
+
+</html>

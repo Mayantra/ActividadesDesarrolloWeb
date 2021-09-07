@@ -1,0 +1,18 @@
+from django.shortcuts import render
+from django.views.generic import TemplateView
+
+# Create your views here.
+class HomeView(TemplateView):
+    template_name='index.html'
+
+class EstudiantesView(TemplateView):
+    template_name='Estudiantes.html'
+
+class AdminsView(TemplateView):
+    template_name='Administradores.html'
+
+class AcercaView(TemplateView):
+    template_name='AcercaDe.html'
+
+class EstuDesta(TemplateView):
+    template_name='EstuDestacados.html'
