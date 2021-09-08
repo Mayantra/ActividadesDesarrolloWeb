@@ -132,11 +132,23 @@ Estudiantes Administradores
     
     width: 50%;
     height: 50%;
-    color:#000 ;
+    
     background:#B0E8E0 ;
     margin: 2% auto;
     padding: 10px;
     border-radius: 15px;
     text-align: justify;
+
+
     
+}
+.Parrafo2 a:visited{
+    color:black;
+}
+
+
+
+.labels{
+    padding: 5px;
+    font-size: 50%;
 }
