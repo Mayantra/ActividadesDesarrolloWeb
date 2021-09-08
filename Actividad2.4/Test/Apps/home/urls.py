@@ -15,14 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import AcercaView, AdminsView, EstuDesta, EstudiantesView, HomeView
+from .views import AcercaView, AdminsView, EstuDesta, EstudiantesView, FormEstudianteView,  HomeView
 
 urlpatterns = [
     path('index/', HomeView.as_view(), name='home'),
     path('estudiantes/', EstudiantesView.as_view(), name='estudiantes'),
     path('administradores/', AdminsView.as_view(), name='administradores'),
     path('acercaDe/', AcercaView.as_view(), name='acercaDe'),
-    path('estuDestacados/', EstuDesta.as_view(), name='estuDestacados')
-    
+    path('estuDestacados/', EstuDesta.as_view(), name='estuDestacados'), 
+    path('estudiantesForms/',FormEstudianteView.as_view(), name='estudianteforms')
 
 ]

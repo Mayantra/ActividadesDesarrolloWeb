@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,10 +19,10 @@
         <a href="{% url 'administradores'%}">Administradores | </a>
         <a href="{% url 'acercaDe'%}">Acerca De</a>
     </div>
-
+    {% block bloques %}
     <div class="BloqueTablaE">
         <table class="TablaEstudiante">
-            {% block fila %}{% endblock %}
+            
             <tr>
                 <td>No.</td>
                 <td>Nombre del Estudiante</td>  
@@ -49,7 +50,8 @@
 
         </table>
     </div>
-
+    {% endblock %}
+   
 
 
 </body>

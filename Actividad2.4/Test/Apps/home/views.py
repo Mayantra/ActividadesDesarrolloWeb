@@ -1,5 +1,11 @@
-from django.shortcuts import render
-from django.views.generic import TemplateView
+
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from django.views.generic import TemplateView, ListView, CreateView
+
+
+from Apps.home.models import Estudiante
+from Apps.home.forms import FormEstudiante
 
 # Create your views here.
 class HomeView(TemplateView):
@@ -16,3 +22,11 @@ class AcercaView(TemplateView):
 
 class EstuDesta(TemplateView):
     template_name='EstuDestacados.html'
+
+
+class FormEstudianteView(CreateView):
+    model = Estudiante
+    form_class = FormEstudiante
+    template_name='EstudiantesForms.html'
+    
+    

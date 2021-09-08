@@ -1,0 +1,20 @@
+
+{% extends 'Estudiantes.html' %}
+{% load static %}
+{% block bloques %}
+
+{% csrf_token %}
+<div class="FormularioEstu">
+    <form action="#" method="POST" enctype="multipart/form-data" class="FormE">
+        
+
+        <div>
+        <div>{{form.nombres.label}}</div> 
+        <div>{{form.nombres}}</div>   
+        </div>
+
+        <button type="submit" name="ingresar">Ingresar</button>
+    </form>
+</div>
+
+{% endblock %} 
