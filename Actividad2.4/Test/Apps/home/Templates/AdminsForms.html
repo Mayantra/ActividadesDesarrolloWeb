@@ -1,6 +1,6 @@
 {% extends 'Estudiantes.html' %}
 {% load static %}
-{% block Titulo %}Resgistro Estudiantes{% endblock %}
+{% block Titulo %}Resgistro Administradores{% endblock %}
 {% block bloques %}
 
 <form method="POST">
@@ -9,7 +9,7 @@
     <h2>{{error}}</h2>
     {% else %}
     <div class="FormularioEstu">
-        <h3>Formularios Estudiantes</h3>
+        <h3>Formularios Administradores</h3>
         <form action="#" method="POST" enctype="multipart/form-data" class="FormE">
 
 
@@ -37,10 +37,12 @@
         </form>
     </div>
     {% endif %}
+
+    
 </form>
 
 <div class="Parrafo2">
-    <a href="{% url 'estudiantesForms' %}"><h1>VER LISTADO</h1></a>
+    <a href="{% url 'adminsForms' %}"><h1>VER LISTADO</h1></a>
 </div>
 
 {% endblock %}

@@ -16,39 +16,36 @@
         <a href="{% url 'home'%}">HOME | </a>
         <a href="{% url 'estudiantes'%}">Estudiantes | </a>
         <a href="{% url 'administradores'%}">Administradores | </a>
-        <a href="{% url 'acercaDe'%}">Acerca De</a>
+        <a href="{% url 'acercaDe'%}">Acerca De|</a>
+        <a href="{% url 'login' %}">Login</a>
     </div>
 
+    {% block bloques %}
+
+    {% if object_list %}
     <div class="BloqueTablaA">
         <table class="TablaAdmin">
 
             <tr>
-                <td>No.</td>
-                <td>Nombre del Administrador</td>
-                <td>Edad</td>
-                <td>DPI</td>
+                <td>Nombres </td>
+                <td>Apellidos</td>  
+                <td>Direccion</td>
+                <td>Carne</td>
             </tr>
+            {% for administradors in object_list %}
             <tr>
-                <td>1</td>
-                <td>Manuel Salazar</td>
-                <td> 45</td>
-                <td>654984984</td>
+                <td>{{ administradors.nombres }}</td>
+                <td>{{ administradors.apellidos }}</td>
+                <td> {{ administradors.direccion }}</td>
+                <td>{{ administradors.carne }}</td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>Azarias Gomez</td>
-                <td>50</td>
-                <td>51981981</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Marcos Solis</td>
-                <td>60</td>
-                <td>65187487748</td>
-            </tr>
+            {% endfor %}
+            
 
         </table>
     </div>
+    {% endif %}
+    {% endblock %}
 
 
 

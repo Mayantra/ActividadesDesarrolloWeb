@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/estilo.css' %}"> 
-    <title>Estudiantes</title>
+    <title>{% block Titulo %}Estudiantes{% endblock %}</title>
 </head>
 
 <body>
@@ -17,39 +17,35 @@
         <a href="{% url 'home'%}">HOME | </a>
         <a href="{% url 'estudiantes'%}">Estudiantes | </a> 
         <a href="{% url 'administradores'%}">Administradores | </a>
-        <a href="{% url 'acercaDe'%}">Acerca De</a>
+        <a href="{% url 'acercaDe'%}">Acerca De|</a>
+        <a href="{% url 'login' %}">Login</a>
     </div>
     {% block bloques %}
+
+    {% if object_list %}
+
     <div class="BloqueTablaE">
         <table class="TablaEstudiante">
             
             <tr>
-                <td>No.</td>
-                <td>Nombre del Estudiante</td>  
-                <td>Edad</td>
+                <td>Nombres </td>
+                <td>Apellidos</td>  
+                <td>Direccion</td>
                 <td>Carne</td>
             </tr>
+            {% for estudiantes in object_list %}
             <tr>
-                <td>1</td>
-                <td>Edwin Bautista</td>
-                <td> 21</td>
-                <td>651981984</td>
+                <td>{{ estudiantes.nombres }}</td>
+                <td>{{ estudiantes.apellidos }}</td>
+                <td> {{ estudiantes.direccion }}</td>
+                <td>{{ estudiantes.carne }}</td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>Carlos Orozco</td>
-                <td>20</td>
-                <td>98495468</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Jorge Merida</td>
-                <td>22</td>
-                <td>2157487</td>
-            </tr>
+            {% endfor %}
+            
 
         </table>
     </div>
+    {% endif %}
     {% endblock %}
    
 
